@@ -14,9 +14,6 @@ public class TSWebMvcConfiguration extends WebMvcConfigurerAdapter {
     public static final String FILESYSTEM_IMG_PATH          =   FILESYSTEM_PATH+"img/";
     public static final String FILESYSTEM_THUMBNAILS_PATH   =   FILESYSTEM_IMG_PATH+"thumbnails/";
 
-    @Value("${static.resource.path}")
-    private String staticResourceLocation;
-
 
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -28,7 +25,7 @@ public class TSWebMvcConfiguration extends WebMvcConfigurerAdapter {
 //
 //        super.addResourceHandlers(registry);
 //    }
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/assets/**").addResourceLocations(staticResourceLocation); }
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/assets/**").addResourceLocations(staticResourceLocation); }
 }
