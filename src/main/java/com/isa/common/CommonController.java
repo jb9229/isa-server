@@ -20,13 +20,13 @@ public class CommonController {
 
 
     @RequestMapping(value="/common/image/upload", method = RequestMethod.POST )
-    public String uploadProfilePhoto(@RequestParam("img")MultipartFile img, @RequestParam("imgName") String imgName) throws IOException {
+    public String uploadProfilePhoto(@RequestParam("img")MultipartFile img) throws IOException {
 
 
         return s3Uploader.upload(img, "isa/img");
 
 
-        //TODO File Name Validation profile_photo length(45)
+
 //        File newFile    =   null;
 //        if(!img.isEmpty()){
 //            try{
