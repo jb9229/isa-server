@@ -6,7 +6,7 @@
 
     <groupId>com.jb</groupId>
     <artifactId>isa</artifactId>
-    <version>0.1.4-20180801</version>
+    <version>0.1.6-20180805</version>
     <packaging>jar</packaging>
 
     <properties>

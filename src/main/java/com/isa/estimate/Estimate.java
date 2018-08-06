@@ -1,35 +1,41 @@
 package com.isa.estimate;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
  * Created by test on 2016-01-31.
  */
 @Entity
-@Getter
-@Setter
+@Data
 public class Estimate {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String userName;
-    private String date;
+    private String mvDate;
     private int amount;
-    private String regidentType;
-    private int floor;
-    private int space;
-    private String condition;
 
     private String cmAddress;
     private String cmAddressDetail;
+    private String cmRegidentType;
+    private int cmFloor;
+    private int cmSpace;
+    private String cmWorkCondition;
+
     private String nmAddress;
     private String nmAddressDetail;
+    private String nmRegidentType;
+    private int nmFloor;
+    private int nmSpace;
+    private String nmWorkCondition;
 
     private boolean bed;
     private String bedType;
@@ -38,7 +44,7 @@ public class Estimate {
     private boolean drawer;
     private String drawerType;
     private boolean sofa;
-    private String sofatType;
+    private String sofaType;
     private boolean tv;
     private String tvType;
     private boolean piano;

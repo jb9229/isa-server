@@ -26,12 +26,12 @@ public class EstimateService {
 
 
 
-    public void deleteSpoon(Long id) {
-        repository.delete(getSpoon(id));
+    public void deleteEstimate(Long id) {
+        repository.delete(getEstimate(id));
     }
 
 
-    public Estimate getSpoon(Long id){
+    public Estimate getEstimate(Long id){
 
 
         Estimate estimate =   repository.findOne(id);
@@ -58,10 +58,10 @@ public class EstimateService {
 
     public Estimate createEstimate(EstimateDto.Create estimateDto) {
 
-        Estimate account = this.modelMapper.map(estimateDto, Estimate.class);
+        Estimate estimate = this.modelMapper.map(estimateDto, Estimate.class);
 
 
-        return this.repository.save(account);
+        return this.repository.save(estimate);
 
     }
 }
